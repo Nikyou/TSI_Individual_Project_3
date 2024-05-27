@@ -13,14 +13,14 @@ class Item:
         return f"{self.name} (ID: {self.item_id})"
 
 # Define the main application window
-class MetroBoardManagerApp(QtWidgets.QMainWindow):
+class MainApp(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
 
         # Set up window properties
         self.setWindowTitle("Metro Board Manager")
         self.setGeometry(100, 100, 400, 250)
-        self.setWindowIcon(QtGui.QIcon('icon.ico')) #https://www.vecteezy.com/free-png/train Train PNGs by Vecteezy
+        self.setWindowIcon(QtGui.QIcon('icon.ico')) #https://www.vecteezy.com/png/10156744-transportation-train-icon-sign-symbol-design
 
         # Initialize dropdown list and list of items
         self.dropdown = QtWidgets.QComboBox()
@@ -209,6 +209,6 @@ class MetroBoardManagerApp(QtWidgets.QMainWindow):
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    window = MetroBoardManagerApp()
+    window = MainApp()
     window.show()
     sys.exit(app.exec_())
